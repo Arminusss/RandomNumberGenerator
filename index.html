@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Random Number Generator</h1>
+        <label for="listLength">Enter the length of the list:</label>
+        <input type="number" id="listLength" min="1" placeholder="Enter a number">
+        <div>
+            <label>
+                <input type="radio" name="repeatOption" value="allow" checked> Allow Repeats
+            </label>
+            <label>
+                <input type="radio" name="repeatOption" value="no-repeat"> No Repeats
+            </label>
+        </div>
+        <button onclick="generateList()">Generate List</button>
+        <button onclick="chooseRandomNumber()">Choose</button>
+        
+        <ul id="numberList"></ul>
+    </div>
+
+    <!-- Modal for displaying the chosen number -->
+    <div id="messageBox" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="chosenNumberText"></p>
+        </div>
+    </div>
+    <footer> designed by Arminusss made with ❤️ and ☕ </footer>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
